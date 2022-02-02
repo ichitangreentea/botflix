@@ -1,0 +1,17 @@
+#id_botflix_area {
+    padding: 0rem 1rem 0;
+}
+
+#id_botflix_area .panel-page {
+    padding: 1rem 3rem 3rem;
+    font-weight: 400;
+    color: #fff;
+}
+
+#id_botflix_area .panel-page h5 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+#id_botflix_area .panel-heading {}
