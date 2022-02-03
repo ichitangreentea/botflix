@@ -6,7 +6,7 @@ export default {
         port: 3000
     },
     head: {
-        title: 'Stream',
+        title: 'Botflix',
         htmlAttrs: {
             lang: 'en'
         },

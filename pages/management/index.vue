@@ -10,30 +10,7 @@
               <div class="row">
                 <div class="col-lg-12 accout-panel-body">
                   <h5>Accout</h5>
-                  <ul class="accoutEA">
-                    <div class="accoutList">
-                      <li class="styles_item-accout">
-                        <div class="styles_postContent">
-                          <p class="text-name">Jos sorost</p>
-                          <p class="text-price ">340 $</p>
-                          <p class="text-status text-success"><i class="fas fa-caret-up"></i> 50,2%</p>
-                          <p class="text-user">Peeratat</p>
-                        </div>
-                        <div class="accout-circle-up"></div>
-                      </li>
-                    </div>
-                    <div class="accoutList">
-                      <li class="styles_item-accout">
-                        <div class="styles_postContent">
-                          <p class="text-name">Jos sorost</p>
-                          <p class="text-price ">340 $</p>
-                          <p class="text-status text-danger"><i class="fas fa-caret-down"></i> 10%</p>
-                          <p class="text-user">Peeratat</p>
-                        </div>
-                        <div class="accout-circle-down"></div>
-                      </li>
-                    </div>
-                  </ul>
+                  <BotAcc />
                 </div>
                 <div class="col-lg-12 section-management">
                   <div class="row">
@@ -61,14 +38,16 @@
   import Leftsidebar from '@/components/nav-slide'
   import Header from '@/components/header'
   import PopularRight from '@/components/Popular_articles/ea-popular-posts'
-  import BotManage from '@/components/bot/BotEa_Manage'
+  import BotManage from '@/components/managebot/BotEa_Manage'
+  import BotAcc from '@/components/managebot/account'
 
   export default {
     components: {
       Leftsidebar,
       Header,
       PopularRight,
-      BotManage
+      BotManage,
+      BotAcc,
     },
   }
 

@@ -224,6 +224,18 @@
     text-align: center;
 }
 
+#id_botflix_profile .profile-picture .personal-section .profile-block .EA-coin {
+    text-align: center;
+    padding: 0.5rem 0 0;
+    font-size: 16px;
+}
+
+#id_botflix_profile .profile-picture .personal-section .profile-block .EA-coin span.credit_coin {
+    padding: 0rem 0.25rem;
+    font-size: 20px;
+    color: #ffd34b;
+}
+
 #id_botflix_profile .profile-picture .Avatar-follow {
     padding: 20px 15px 15px;
     display: flex;
@@ -307,6 +319,12 @@
 
 #id_botflix_profile .profile-picture .input-group-prepend {
     background-color: transparent;
+}
+
+#id_botflix_profile .edit-panel-body {
+    padding: 1rem 1rem 3rem;
+    font-weight: 400;
+    color: #fff;
 }
 
 #inviteCode.invite-page {
@@ -1130,18 +1148,27 @@
 
 .accout-panel-body ul.accoutEA {
     margin: 0;
-    display: flex;
+    display: -webkit-inline-box;
     padding: 0;
+}
+
+.scrollaccount {
+    white-space: nowrap;
+    width: 100%;
+    display: list-item;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding-bottom: 15px;
 }
 
 .accout-panel-body ul.accoutEA .accoutList {
     position: relative;
     background-color: #373334;
-    width: 25%;
+    width: 17.5%;
     color: #fff;
     border-radius: 10px;
-    margin-right: 30px;
-    padding: 25px;
+    margin-right: 20px;
+    padding: 20px;
     list-style: none;
 }
 

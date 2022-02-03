@@ -132,5 +132,8 @@
     width: 100% !important;
     margin-top: 15px !important;
   }
+    .google-bnt-style:hover {
+    color: #1ca1dc;
+  }
 
 </style>

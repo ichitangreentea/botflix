@@ -1,74 +1,24 @@
 <template>
   <div>
     <b-tabs content-class="mt-3">
-      <b-tab title="All bot" active>
-
-        <b-table-simple responsive>
-          <b-tbody>
-            <b-tr v-for="i of items" :key="i.id">
-              <b-td class="text-left">{{i.NameBot}}</b-td>
-              <b-td class="text-center">{{i.coin}}</b-td>
-              <div style="display: contents;" v-if="i.status === 'Y'">
-                <b-td class="text-right text-success"><span v-html=" i.price"></span></b-td>
-              </div>
-              <div style="display: contents;" v-else>
-                <b-td class="text-right text-danger"><span v-html=" i.price"></span></b-td>
-              </div>
-            </b-tr>
-          </b-tbody>
-        </b-table-simple>
-
-      </b-tab>
-
-
-      <b-tab title="Forex bot">
-        <b-table-simple responsive>
-          <b-tbody>
-            <b-tr v-for="i of items" :key="i.id">
-              <b-td class="text-left">{{i.NameBot}}</b-td>
-              <b-td class="text-center">{{i.coin}}</b-td>
-              <div style="display: contents;" v-if="i.status === 'Y'">
-                <b-td class="text-right text-success"><span v-html=" i.price"></span></b-td>
-              </div>
-              <div style="display: contents;" v-else>
-                <b-td class="text-right text-danger"><span v-html=" i.price"></span></b-td>
-              </div>
-            </b-tr>
-          </b-tbody>
-        </b-table-simple>
-      </b-tab>
-      <b-tab title="Crypto bot">
-        <b-table-simple responsive>
-          <b-tbody>
-            <b-tr v-for="i of items" :key="i.id">
-              <b-td class="text-left">{{i.NameBot}}</b-td>
-              <b-td class="text-center">{{i.coin}}</b-td>
-              <div style="display: contents;" v-if="i.status === 'Y'">
-                <b-td class="text-right text-success"><span v-html=" i.price"></span></b-td>
-              </div>
-              <div style="display: contents;" v-else>
-                <b-td class="text-right text-danger"><span v-html=" i.price"></span></b-td>
-              </div>
-            </b-tr>
-          </b-tbody>
-        </b-table-simple>
-      </b-tab>
-      <b-tab title="Metal bot">
-        <b-table-simple responsive>
-          <b-tbody>
-            <b-tr v-for="i of items" :key="i.id">
-              <b-td class="text-left">{{i.NameBot}}</b-td>
-              <b-td class="text-center">{{i.coin}}</b-td>
-              <div style="display: contents;" v-if="i.status === 'Y'">
-                <b-td class="text-right text-success"><span v-html=" i.price"></span></b-td>
-              </div>
-              <div style="display: contents;" v-else>
-                <b-td class="text-right text-danger"><span v-html=" i.price"></span></b-td>
-              </div>
-            </b-tr>
-          </b-tbody>
-        </b-table-simple>
-      </b-tab>
+      <div class="scrollmenu" v-for="tab of itemstab" :key="tab.id">
+        <b-tab :title="tab.Name">
+          <b-table-simple responsive> 
+            <b-tbody>
+              <b-tr v-for="i of tab.itemslist" :key="i.id">
+                <b-td class="text-left">{{i.NameBot}}</b-td>
+                <b-td class="text-center">{{i.coin}}</b-td>
+                <div style="display: contents;" v-if="i.status === 'Y'">
+                  <b-td class="text-right text-success"><span v-html=" i.price"></span></b-td>
+                </div>
+                <div style="display: contents;" v-else>
+                  <b-td class="text-right text-danger"><span v-html=" i.price"></span></b-td>
+                </div>
+              </b-tr>
+            </b-tbody>
+          </b-table-simple>
+        </b-tab>
+      </div>
     </b-tabs>
   </div>
 </template>
@@ -78,29 +28,84 @@
 
     data() {
       return {
-        items: [{
+        itemstab: [{
             id: 1,
-            NameBot: "Emazona",
-            coin: "EUR/USD",
-            price: '<i class="fas fa-caret-up"></i> 39.56',
-            status: "Y"
+            Name: "All Bot",
+            itemslist: [{
+                id: 1,
+                NameBot: "Emazona",
+                coin: "EUR/USD",
+                price: '<i class="fas fa-caret-up"></i> 39.56',
+                status: "Y"
+              },
+              {
+                id: 2,
+                NameBot: "Super-Cryp",
+                coin: "Botfilx Coin",
+                price: '<i class="fas fa-caret-up"></i> 9988.1',
+                status: "Y"
+              },
+              {
+                id: 3,
+                NameBot: "Watjai",
+                coin: "GBP/USD",
+                price: '<i class="fas fa-caret-down"></i> 28.33',
+                status: "N",
+              }
+            ]
           },
           {
             id: 2,
-            NameBot: "Super-Cryp",
-            coin: "Botfilx Coin",
-            price: '<i class="fas fa-caret-up"></i> 9988.1',
-            status: "Y"
+            Name: "Forex bot",
+            itemslist: [{
+                id: 1,
+                NameBot: "Emazona",
+                coin: "EUR/USD",
+                price: '<i class="fas fa-caret-up"></i> 39.56',
+                status: "Y"
+              },
+              {
+                id: 2,
+                NameBot: "Watjai",
+                coin: "GBP/USD",
+                price: '<i class="fas fa-caret-down"></i> 28.33',
+                status: "N",
+              }
+            ]
           },
           {
             id: 3,
-            NameBot: "Watjai",
-            coin: "GBP/USD",
-            price: '<i class="fas fa-caret-down"></i> 28.33',
-            status: "N",
+            Name: "Crypto bot",
+            itemslist: [{
+              id: 1,
+              NameBot: "Emazona",
+              coin: "EUR/USD",
+              price: '<i class="fas fa-caret-up"></i> 39.56',
+              status: "Y"
+            }, ]
+          },
+          {
+            id: 4,
+            Name: "Metal bot",
+            itemslist: [{
+                id: 1,
+                NameBot: "Emazona",
+                coin: "EUR/USD",
+                price: '<i class="fas fa-caret-up"></i> 39.56',
+                status: "N"
+              },
+              {
+                id: 2,
+                NameBot: "Watjai",
+                coin: "GBP/USD",
+                price: '<i class="fas fa-caret-down"></i> 28.33',
+                status: "N",
+              }
+            ]
+          },
 
-          }
-        ]
+        ],
+
       };
     }
   };
@@ -115,7 +120,7 @@
 
   .nav-link {
     display: block;
-        padding: 0.25rem;
+    padding: 0.25rem;
     margin: 0 0.5rem;
     font-size: 1.2rem;
     font-weight: 400;
@@ -214,11 +219,19 @@
     vertical-align: middle;
     margin-right: 5px;
   }
+
   .table span i.closeEa {
     font-size: 20px;
     vertical-align: middle;
     padding-left: 10px;
   }
+
+  .scrollmenu {
+    /* white-space: nowrap;
+    width: 360px;
+    overflow-x: scroll; */
+  }
+
   .text-success {
     color: #88bc00 !important;
   }
@@ -227,9 +240,17 @@
     color: #d4323f !important;
   }
 
-    .text-gay {
+  .text-gay {
     color: #7d8488 !important;
   }
 
-</style>
+  .nav-tabs {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    max-width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding-bottom: 10px;
+  }
 
+</style>

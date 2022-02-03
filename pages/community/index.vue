@@ -15,82 +15,31 @@
                       aria-label="Type in to search ..">
                   </div>
                   <b-tabs content-class="mt-3 section-content">
-                    <b-tab title="Over view" active>
-                      <section class="articlecontent">
-                        <h6>Forex</h6>
-                        <hr>
-
-                        <div class="com-slick card-content row">
-                          <div v-for="i of items" :key="i.id">
-                            <div class="col-lg-12">
+                    <div class="scrollmenu" v-for="tab in itemstab" :key="tab.id">
+                      <b-tab :title="tab.Name">
+                        <section class="articlecontent" v-for="i in tab.itemscategory" :key="i.id">
+                          <h6>{{ i.Namecategory}}</h6>
+                          <hr>
+                          <div class="com-slick card-content row">
+                            <div class="col-lg-12" v-for="items in i.itemslist" :key="items.id">
                               <b-card no-body>
                                 <b-link href="/community/detail">
-                                  <b-card-img :src="`${i.Cardimg}`" alt="Image Responsive" class="rounded-0">
+                                  <b-card-img :src="`${items.Cardimg}`" alt="Image Responsive" class="rounded-0">
                                   </b-card-img>
                                 </b-link>
                                 <b-card-body>
-                                  <h4 class="card-title">{{i.Cardname}}</h4>
+                                  <h4 class="card-title">{{items.Cardname}}</h4>
                                   <b-card-text>
-                                    {{i.Cardtext}}
+                                    {{items.Cardtext}}
                                   </b-card-text>
                                 </b-card-body>
                               </b-card>
                             </div>
                           </div>
-
-
-                        </div>
-
-
-                      </section>
-                      <section class="articlecontent">
-                        <h6>Follows <span class="text-link "> All</span></h6>
-                        <hr>
-                        <div class="user-follows d-flex">
-                          <div v-for="avatar in section1" :key="avatar.id">
-                            <div id="user-avatar-follows">
-                              <div class="user-avatar-border">
-                                <div class="user-avatar-img avatarPic">
-                                  <img :src="`${avatar.image}`" class="" alt="" />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                        </div>
-                      </section>
-                      <section class="articlecontent">
-                        <h6>Cryptocurrency</h6>
-                        <hr>
-                        <div class="com-slick2 card-content row">
-                          <div v-for="i of items" :key="i.id">
-                            <div class="col-lg-12">
-                              <b-card no-body>
-                                <b-link href="/community/detail">
-                                  <b-card-img :src="`${i.Cardimg}`" alt="Image Responsive" class="rounded-0">
-                                  </b-card-img>
-                                </b-link>
-                                <b-card-body>
-                                  <h4 class="card-title">{{i.Cardname}}</h4>
-                                  <b-card-text>
-                                    {{i.Cardtext}}
-                                  </b-card-text>
-                                </b-card-body>
-                              </b-card>
-                            </div>
-                          </div>
-                        </div>
-                      </section>
-
-                    </b-tab>
-
-
-                    <b-tab title="Top list"></b-tab>
-                    <b-tab title="Education"></b-tab>
-                    <b-tab title="Broker Reviews"></b-tab>
+                        </section>
+                      </b-tab>
+                    </div>
                   </b-tabs>
-
-
                 </div>
                 <div class="col-lg-3">
                   <NewRight />
@@ -138,41 +87,133 @@
             image: require('@/assets/images/img-avatar-3.png'),
           },
         ],
-        items: [{
+        itemstab: [{
             id: 1,
-            Cardname: "เปิดตัว Botfilx",
-            Cardimg: require('@/assets/upload/bf-img.png'),
-            Cardtext: "Botfilx แพรตฟอร์ม ตาม Signal EA เปิดตัว อย่างยิ่งใหญ่ นักลงทุนทั้งในวงการ Forexและนักลงทุนหน้าใหม่ ให้ควาสนใจเป็นอย่างมาก ภายในแพรตฟอร์มมี EA ให้....",
+            Name: "Over view",
+            itemscategory: [{
+                id: 1,
+                Namecategory: "Forex",
+                itemslist: [{
+                    id: 1,
+                    Cardname: "เปิดตัว Botfilx",
+                    Cardimg: require('@/assets/upload/bf-img.png'),
+                    Cardtext: "Botfilx แพรตฟอร์ม ตาม Signal EA เปิดตัว อย่างยิ่งใหญ่ นักลงทุนทั้งในวงการ Forexและนักลงทุนหน้าใหม่ ให้ควาสนใจเป็นอย่างมาก ภายในแพรตฟอร์มมี EA ให้....",
+                  },
+                  {
+                    id: 2,
+                    Cardname: "เปิดตัว Botfilx",
+                    Cardimg: require('@/assets/upload/bf-img-1.png'),
+                    Cardtext: "Botfilx แพรตฟอร์ม ตาม Signal EA เปิดตัว อย่างยิ่งใหญ่ นักลงทุนทั้งในวงการ Forexและนักลงทุนหน้าใหม่ ให้ควาสนใจเป็นอย่างมาก ภายในแพรตฟอร์มมี EA ให้....",
+
+                  },
+                  {
+                    id: 3,
+                    Cardname: "เปิดตัว Botfilx",
+                    Cardimg: require('@/assets/upload/bf-img.png'),
+                    Cardtext: "Botfilx แพรตฟอร์ม ตาม Signal EA เปิดตัว อย่างยิ่งใหญ่ นักลงทุนทั้งในวงการ Forexและนักลงทุนหน้าใหม่ ให้ควาสนใจเป็นอย่างมาก ภายในแพรตฟอร์มมี EA ให้....",
+
+                  },
+                  {
+                    id: 4,
+                    Cardname: "เปิดตัว Botfilx",
+                    Cardimg: require('@/assets/upload/bf-img.png'),
+                    Cardtext: "Botfilx แพรตฟอร์ม ตาม Signal EA เปิดตัว อย่างยิ่งใหญ่ นักลงทุนทั้งในวงการ Forexและนักลงทุนหน้าใหม่ ให้ควาสนใจเป็นอย่างมาก ภายในแพรตฟอร์มมี EA ให้....",
+
+                  },
+                  {
+                    id: 5,
+                    Cardname: "เปิดตัว Botfilx",
+                    Cardimg: require('@/assets/upload/bf-img.png'),
+                    Cardtext: "Botfilx แพรตฟอร์ม ตาม Signal EA เปิดตัว อย่างยิ่งใหญ่ นักลงทุนทั้งในวงการ Forexและนักลงทุนหน้าใหม่ ให้ควาสนใจเป็นอย่างมาก ภายในแพรตฟอร์มมี EA ให้....",
+                  },
+                ]
+              },
+              {
+                id: 2,
+                Namecategory: "Cryptocurrency",
+                itemslist: [{
+                    id: 1,
+                    Cardname: "เปิดตัว Botfilx",
+                    Cardimg: require('@/assets/upload/bf-img.png'),
+                    Cardtext: "Botfilx แพรตฟอร์ม ตาม Signal EA เปิดตัว อย่างยิ่งใหญ่ นักลงทุนทั้งในวงการ Forexและนักลงทุนหน้าใหม่ ให้ควาสนใจเป็นอย่างมาก ภายในแพรตฟอร์มมี EA ให้....",
+                  },
+                  {
+                    id: 2,
+                    Cardname: "เปิดตัว Botfilx",
+                    Cardimg: require('@/assets/upload/bf-img-1.png'),
+                    Cardtext: "Botfilx แพรตฟอร์ม ตาม Signal EA เปิดตัว อย่างยิ่งใหญ่ นักลงทุนทั้งในวงการ Forexและนักลงทุนหน้าใหม่ ให้ควาสนใจเป็นอย่างมาก ภายในแพรตฟอร์มมี EA ให้....",
+
+                  },
+                  {
+                    id: 3,
+                    Cardname: "เปิดตัว Botfilx",
+                    Cardimg: require('@/assets/upload/bf-img.png'),
+                    Cardtext: "Botfilx แพรตฟอร์ม ตาม Signal EA เปิดตัว อย่างยิ่งใหญ่ นักลงทุนทั้งในวงการ Forexและนักลงทุนหน้าใหม่ ให้ควาสนใจเป็นอย่างมาก ภายในแพรตฟอร์มมี EA ให้....",
+
+                  },
+                  {
+                    id: 4,
+                    Cardname: "เปิดตัว Botfilx",
+                    Cardimg: require('@/assets/upload/bf-img.png'),
+                    Cardtext: "Botfilx แพรตฟอร์ม ตาม Signal EA เปิดตัว อย่างยิ่งใหญ่ นักลงทุนทั้งในวงการ Forexและนักลงทุนหน้าใหม่ ให้ควาสนใจเป็นอย่างมาก ภายในแพรตฟอร์มมี EA ให้....",
+
+                  },
+                  {
+                    id: 5,
+                    Cardname: "เปิดตัว Botfilx",
+                    Cardimg: require('@/assets/upload/bf-img.png'),
+                    Cardtext: "Botfilx แพรตฟอร์ม ตาม Signal EA เปิดตัว อย่างยิ่งใหญ่ นักลงทุนทั้งในวงการ Forexและนักลงทุนหน้าใหม่ ให้ควาสนใจเป็นอย่างมาก ภายในแพรตฟอร์มมี EA ให้....",
+                  },
+                ]
+              },
+            ],
           },
-          {
+   
+{
             id: 2,
-            Cardname: "เปิดตัว Botfilx",
-            Cardimg: require('@/assets/upload/bf-img-1.png'),
-            Cardtext: "Botfilx แพรตฟอร์ม ตาม Signal EA เปิดตัว อย่างยิ่งใหญ่ นักลงทุนทั้งในวงการ Forexและนักลงทุนหน้าใหม่ ให้ควาสนใจเป็นอย่างมาก ภายในแพรตฟอร์มมี EA ให้....",
+            Name: "Top list",
+            itemscategory: [{
+                id: 1,
+                Namecategory: "Top",
+                itemslist: [{
+                    id: 1,
+                    Cardname: "เปิดตัว Botfilx",
+                    Cardimg: require('@/assets/upload/bf-img.png'),
+                    Cardtext: "Botfilx แพรตฟอร์ม ตาม Signal EA เปิดตัว อย่างยิ่งใหญ่ นักลงทุนทั้งในวงการ Forexและนักลงทุนหน้าใหม่ ให้ควาสนใจเป็นอย่างมาก ภายในแพรตฟอร์มมี EA ให้....",
+                  },
+                  {
+                    id: 2,
+                    Cardname: "เปิดตัว Botfilx",
+                    Cardimg: require('@/assets/upload/bf-img-1.png'),
+                    Cardtext: "Botfilx แพรตฟอร์ม ตาม Signal EA เปิดตัว อย่างยิ่งใหญ่ นักลงทุนทั้งในวงการ Forexและนักลงทุนหน้าใหม่ ให้ควาสนใจเป็นอย่างมาก ภายในแพรตฟอร์มมี EA ให้....",
 
-          },
-          {
-            id: 3,
-            Cardname: "เปิดตัว Botfilx",
-            Cardimg: require('@/assets/upload/bf-img.png'),
-            Cardtext: "Botfilx แพรตฟอร์ม ตาม Signal EA เปิดตัว อย่างยิ่งใหญ่ นักลงทุนทั้งในวงการ Forexและนักลงทุนหน้าใหม่ ให้ควาสนใจเป็นอย่างมาก ภายในแพรตฟอร์มมี EA ให้....",
+                  },
+                  {
+                    id: 3,
+                    Cardname: "เปิดตัว Botfilx",
+                    Cardimg: require('@/assets/upload/bf-img.png'),
+                    Cardtext: "Botfilx แพรตฟอร์ม ตาม Signal EA เปิดตัว อย่างยิ่งใหญ่ นักลงทุนทั้งในวงการ Forexและนักลงทุนหน้าใหม่ ให้ควาสนใจเป็นอย่างมาก ภายในแพรตฟอร์มมี EA ให้....",
 
-          },
-          {
-            id: 4,
-            Cardname: "เปิดตัว Botfilx",
-            Cardimg: require('@/assets/upload/bf-img.png'),
-            Cardtext: "Botfilx แพรตฟอร์ม ตาม Signal EA เปิดตัว อย่างยิ่งใหญ่ นักลงทุนทั้งในวงการ Forexและนักลงทุนหน้าใหม่ ให้ควาสนใจเป็นอย่างมาก ภายในแพรตฟอร์มมี EA ให้....",
+                  },
+                  {
+                    id: 4,
+                    Cardname: "เปิดตัว Botfilx",
+                    Cardimg: require('@/assets/upload/bf-img.png'),
+                    Cardtext: "Botfilx แพรตฟอร์ม ตาม Signal EA เปิดตัว อย่างยิ่งใหญ่ นักลงทุนทั้งในวงการ Forexและนักลงทุนหน้าใหม่ ให้ควาสนใจเป็นอย่างมาก ภายในแพรตฟอร์มมี EA ให้....",
 
+                  },
+                  {
+                    id: 5,
+                    Cardname: "เปิดตัว Botfilx",
+                    Cardimg: require('@/assets/upload/bf-img.png'),
+                    Cardtext: "Botfilx แพรตฟอร์ม ตาม Signal EA เปิดตัว อย่างยิ่งใหญ่ นักลงทุนทั้งในวงการ Forexและนักลงทุนหน้าใหม่ ให้ควาสนใจเป็นอย่างมาก ภายในแพรตฟอร์มมี EA ให้....",
+                  },
+                ]
+              },
+            ],
           },
-          {
-            id: 5,
-            Cardname: "เปิดตัว Botfilx",
-            Cardimg: require('@/assets/upload/bf-img.png'),
-            Cardtext: "Botfilx แพรตฟอร์ม ตาม Signal EA เปิดตัว อย่างยิ่งใหญ่ นักลงทุนทั้งในวงการ Forexและนักลงทุนหน้าใหม่ ให้ควาสนใจเป็นอย่างมาก ภายในแพรตฟอร์มมี EA ให้....",
 
-          },
-        ]
+        ],
       }
     },
 
