@@ -4,6 +4,7 @@
       <main class="page-content">
         <Header />
         <Leftsidebar />
+        <Modalsecurity />
 
         <div class="container-fluid">
           <div class="row">
@@ -14,7 +15,7 @@
               <div class="row security-panel-body ">
                 <ul class="postsList">
 
-                  <li href="" class="styles_item-botEa">
+                  <li href="" class="styles_item-botEa" v-b-modal.Identitymodal>
                     <div class="styles_postContent">
                       <div class="styles_content-img ">
                         <img src="@/assets/images/icon-security-bot-1.svg" class="" width="100" height="100" />
@@ -23,12 +24,12 @@
                         <p>Identity <img src="@/assets/images/icon-check.svg" class="ml-2 mr-4" width="40"
                             height="40" /></p>
                       </div>
-                      <a class="right-nexxt" href="#" aria-expanded="false">
+                      <a class="right-nexxt" href="#" v-b-modal.Identitymodal>
                         <font-awesome-icon :icon="['fas', 'chevron-right']" />
                       </a>
                     </div>
                   </li>
-                  <li href="" class="styles_item-botEa">
+                  <li href="#" class="styles_item-botEa" v-b-modal.Email2famodal>
                     <div class="styles_postContent">
                       <div class="styles_content-img ">
                         <img src="@/assets/images/icon-security-bot-2.svg" class="" width="100" height="100" />
@@ -37,7 +38,7 @@
                         <p>Email 2FA <img src="@/assets/images/icon-check.svg" class="ml-2 mr-4" width="40"
                             height="40" /></p>
                       </div>
-                      <a class="right-nexxt" href="#" aria-expanded="false">
+                      <a class="right-nexxt" href="#" v-b-modal.Email2famodal>
                         <font-awesome-icon :icon="['fas', 'chevron-right']" />
                       </a>
                     </div>
@@ -45,7 +46,7 @@
                 </ul>
                 <ul class="postsList">
 
-                  <li href="" class="styles_item-botEa">
+                  <li href="#" class="styles_item-botEa" v-b-modal.SMS2famodal>
                     <div class="styles_postContent">
                       <div class="styles_content-img ">
                         <img src="@/assets/images/icon-security-bot-3.svg" class="" width="100" height="100" />
@@ -54,12 +55,12 @@
                         <p>SMS 2FA<img src="@/assets/images/icon-check.svg" class="ml-2 mr-4" width="40" height="40" />
                         </p>
                       </div>
-                      <a class="right-nexxt" href="#" aria-expanded="false">
+                      <a class="right-nexxt" href="#" v-b-modal.SMS2famodal>
                         <font-awesome-icon :icon="['fas', 'chevron-right']" />
                       </a>
                     </div>
                   </li>
-                  <li href="" class="styles_item-botEa">
+                  <li href="" class="styles_item-botEa" v-b-modal.MTmodal>
                     <div class="styles_postContent">
                       <div class="styles_content-img ">
                         <img src="@/assets/images/icon-security-bot-4.svg" class="" width="100" height="100" />
@@ -69,7 +70,7 @@
                         </p>
 
                       </div>
-                      <a class="right-nexxt" href="#" aria-expanded="false">
+                      <a class="right-nexxt" href="#" v-b-modal.MTmodal>
                         <font-awesome-icon :icon="['fas', 'chevron-right']" />
                       </a>
                     </div>
@@ -131,23 +132,15 @@
                         <div>รังสิต , ประเทศไทย</div>
                       </div>
                     </div>
-
                   </li>
-
-
-
-
                 </ul>
+
+                
               </div>
-
             </div>
-
-
           </div>
-
         </div>
-
-
+         <Footer />
       </main>
     </div>
   </div>
@@ -157,10 +150,15 @@
 <script>
   import Leftsidebar from '@/components/nav-slide'
   import Header from '@/components/header'
+  import Footer from '@/components/footer'
+  import Modalsecurity from '@/components/modal/securitymodal'
+
   export default {
     components: {
       Leftsidebar,
+      Footer,
       Header,
+      Modalsecurity
     },
 
   }

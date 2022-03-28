@@ -22,7 +22,7 @@
                   ช่วยทำงานแทนให้ได้ โดยมากแล้วสามารถช่วยทำกำไรได้(ถ้า EA ดีพอ) แต่ก็ไม่ร้อนแรงมากนักเท่าเทรดด้วยตัวเอง
                 </p>
 
-<apexchart width="500" type="line" :options="options" :series="series"></apexchart>
+                <apexchart width="500" type="line" :options="options" :series="series"></apexchart>
 
               </div>
 
@@ -31,7 +31,9 @@
             </div>
           </div>
         </div>
+        <Footer />
       </main>
+
     </div>
   </div>
 </template>
@@ -39,33 +41,34 @@
 <script>
   import Leftsidebar from '@/components/nav-slide'
   import Header from '@/components/header'
+  import Footer from '@/components/footer'
 
-  
+
 
   export default {
-       data (){
-     return {
-      options: {
-        chart: {
-          id: 'vuechart-example'
+    data() {
+      return {
+        options: {
+          chart: {
+            id: 'vuechart-example'
+          },
+          xaxis: {
+            categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998]
+          }
         },
-        xaxis: {
-          categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998]
-        }
-      },
-      series: [{
-        name: 'series-1',
-        data: [30, 40, 45, 50, 49, 60, 70, 91]
-      }],
-    }
-  },
+        series: [{
+          name: 'series-1',
+          data: [30, 40, 45, 50, 49, 60, 70, 91]
+        }],
+      }
+    },
 
     components: {
       Leftsidebar,
       Header,
+      Footer,
     },
- 
-}
 
+  }
 
 </script>

@@ -279,45 +279,46 @@
 
 /*------scroll bar---------------------*/
 
-.page-wrapper .page-content ::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 4px;
     height: 4px;
+    border-radius: 10px;
 }
 
-.page-wrapper .page-content ::-webkit-scrollbar-button {
+::-webkit-scrollbar-button {
     width: 0px;
     height: 0px;
 }
 
-.page-wrapper .page-content ::-webkit-scrollbar-thumb {
-    background: #525965;
+::-webkit-scrollbar-thumb {
+    background: #666666;
     border: 0px none #ffffff;
     border-radius: 0px;
 }
 
-.page-wrapper .page-content ::-webkit-scrollbar-thumb:hover {
-    background: #525965;
+::-webkit-scrollbar-thumb:hover {
+    background: #666666;
 }
 
-.page-wrapper .page-content ::-webkit-scrollbar-thumb:active {
-    background: #525965;
+::-webkit-scrollbar-thumb:active {
+    background: #666666;
 }
 
-.page-wrapper .page-content ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background: transparent;
     border: 0px none #ffffff;
     border-radius: 50px;
 }
 
-.page-wrapper .page-content ::-webkit-scrollbar-track:hover {
+::-webkit-scrollbar-track:hover {
     background: transparent;
 }
 
-.page-wrapper .page-content ::-webkit-scrollbar-track:active {
+::-webkit-scrollbar-track:active {
     background: transparent;
 }
 
-.page-wrapper .page-content ::-webkit-scrollbar-corner {
+::-webkit-scrollbar-corner {
     background: transparent;
 }
 
@@ -364,3 +365,26 @@
 .page-wrapper.chiller-theme.toggled #close-sidebar:hover {
     color: #ffffff;
 }
+
+
+/* //////////////////////////////////////////// */
+
+@media (max-width: 1200px) {}
+
+@media (max-width: 991.98px) {
+    #show-sidebar {
+        display: none;
+    }
+    .page-wrapper .page-content>div {
+        padding: 0px;
+    }
+    .sidebar-wrapper {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 576px) {}
+
+@media (max-width: 425px) {}

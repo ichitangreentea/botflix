@@ -37,6 +37,7 @@
             </div>
           </div>
         </div>
+         <Footer />
       </main>
     </div>
 
@@ -46,9 +47,11 @@
 <script>
   import Leftsidebar from '@/components/nav-slide'
   import Header from '@/components/header'
+  import Footer from '@/components/footer'
   export default {
     components: {
       Leftsidebar,
+      Footer,
       Header,
     },
 

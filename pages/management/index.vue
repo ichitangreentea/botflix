@@ -16,6 +16,9 @@
                   <div class="row">
                     <div class="col-lg-9">
                       <h5>Bot EA</h5>
+                      <div class="add-account">
+                        <b-link href="/openAccount" class="btn btn-md edit-profile"><i class="fas fa-plus-circle"></i> Add Account</b-link>
+                      </div>
                       <!--  -->
                       <BotManage />
                       <!--  -->
@@ -29,6 +32,7 @@
             </div>
           </div>
         </div>
+         <Footer />
       </main>
     </div>
   </div>
@@ -37,6 +41,7 @@
 <script>
   import Leftsidebar from '@/components/nav-slide'
   import Header from '@/components/header'
+  import Footer from '@/components/footer'
   import PopularRight from '@/components/Popular_articles/ea-popular-posts'
   import BotManage from '@/components/managebot/BotEa_Manage'
   import BotAcc from '@/components/managebot/account'
@@ -44,6 +49,7 @@
   export default {
     components: {
       Leftsidebar,
+      Footer,
       Header,
       PopularRight,
       BotManage,

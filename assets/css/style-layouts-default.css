@@ -9,9 +9,122 @@
 }
 
 #id_botflix_area .panel-page h5 {
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 400;
     margin-bottom: 1rem;
 }
 
 #id_botflix_area .panel-heading {}
+
+
+/* //////// */
+
+#bootom-nav-header {}
+
+#bootom-nav-header .navbar-fixed-bottom {
+    display: none;
+    position: fixed;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0.5rem;
+    color: #fff;
+    background-color: #231f20;
+    text-align: center;
+    z-index: 9;
+}
+
+#bootom-nav-header .navbar-nav-bootom {
+    display: -webkit-inline-box;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    width: 100%;
+}
+
+#bootom-nav-header .nav-item-bootom {
+    width: 20%;
+    text-align: center;
+}
+
+#bootom-nav-header .nav-link-bootom {
+    display: block;
+    padding: 0.2rem;
+    margin: 0 0.2rem;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+#bootom-nav-header a.nav-link-bootom {
+    color: #9b999a;
+}
+
+#bootom-nav-header a.nav-link-bootom:hover {
+    color: #fff;
+}
+
+#bootom-nav-header a.nav-link-bootom img {
+    opacity: 0.5;
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+#bootom-nav-header a.nav-link-bootom:hover img {
+    opacity: 1;
+}
+
+
+/* ////////// */
+
+#footer-nav {
+    position: relative;
+    bottom: 0;
+    margin: auto;
+    padding: 0.5rem 1.25rem;
+    background-color: #231f20;
+    width: 100%;
+}
+
+#footer-nav .panel-page-footer {
+    color: #fff;
+    padding: 0.5rem 0.5rem 0.5rem 3rem;
+    background-color: #231f20;
+}
+
+#footer-nav .panel-page-footer p {
+    margin-bottom: 0;
+    font-size: 12px;
+}
+
+#footer-nav .panel-page-footer .footer_riskwarning {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    font-size: 12px;
+    border-bottom: 1px solid #373334;
+    width: 100%;
+}
+
+
+/* //////////////////////////////////////////// */
+
+@media (max-width: 1200px) {}
+
+@media (max-width: 991.98px) {
+    #id_botflix_area .panel-page {
+        padding: 1rem;
+    }
+    #bootom-nav-header .navbar-fixed-bottom {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 576px) {}
+
+@media (max-width: 425px) {}

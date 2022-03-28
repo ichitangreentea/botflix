@@ -23,6 +23,7 @@
     font-size: 90px;
     font-weight: 400;
     margin-bottom: 1.5rem;
+    color: #fff;
 }
 
 #id_botflix_contact .contact__panel-body {
@@ -322,10 +323,92 @@
 }
 
 #id_botflix_profile .edit-panel-body {
-    padding: 1rem 1rem 3rem;
+    padding: 3rem 1rem 3rem;
     font-weight: 400;
-    color: #fff;
+    color: #9B999A;
 }
+
+#id_botflix_profile .edit-panel-body .Profile__content {
+    width: 100%;
+}
+
+#id_botflix_profile .edit-panel-body .Profile__content .info-user {
+    text-align: right;
+    padding-bottom: 15px;
+    position: relative;
+    margin-top: -25px;
+}
+
+#id_botflix_profile .edit-panel-body .Profile__content .info-user p {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+#id_botflix_profile .edit-panel-body .Profile__content .Profile__Personal {
+    padding: 30px;
+    border-bottom: 1px solid #373334;
+    border-top: 1px solid #373334;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.07);
+}
+
+.personal-intro-wrapper {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    margin: 0px auto;
+}
+
+.personal-avatar-wrapper {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: rgb(244, 244, 249);
+    overflow: hidden;
+    border-radius: 50%;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    z-index: 5;
+}
+
+.personal-images {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    z-index: 10;
+    pointer-events: none;
+    will-change: opacity;
+    backface-visibility: hidden;
+    transition: opacity 0.35s ease 0s;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.personal-name {
+    text-align: center;
+    padding: 15px 15px 10px
+}
+
+.personal-name .username {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.edit-personal-image {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    color: #9B999A;
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////// */
 
 #inviteCode.invite-page {
     box-sizing: border-box;
@@ -467,7 +550,7 @@
 }
 
 #id_botflix_profile .botea-panel h5 {
-    font-size: 1.75rem;
+    font-size: 24px;
     font-weight: 400;
     margin-bottom: 1rem;
 }
@@ -477,13 +560,13 @@
 }
 
 .bf-populated h5 {
-    font-size: 1.75rem;
+    font-size: 24px;
     font-weight: 400;
     margin-bottom: 1rem;
 }
 
 .bf-populated span {
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 400;
     float: right;
 }
@@ -689,7 +772,7 @@
 .security-panel-body ul.postsList {
     margin: 0;
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .security-panel-body ul.postsList .styles_item-botEa {
@@ -1023,6 +1106,382 @@
 
 /* ////////////////////////////////////////////////////////////////////////////  */
 
+
+/* payment */
+
+.deposit-panel-body .payment_card {
+    position: relative;
+    background-color: #231f20;
+    border-radius: 6px;
+    padding: 30px;
+}
+
+.deposit-panel-body .payment_card .payment-list-title {
+    /* border-bottom: 1px solid #e0e0e0; */
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.deposit-panel-body .payment_card .payment-list-title h4 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.acc {
+    margin-top: 14px;
+    position: relative;
+    transition: .3s all ease;
+    background-color: #fff;
+    border: 1px solid #e9e9ea;
+    padding: 12px;
+    border-radius: 4px;
+    color: #000;
+}
+
+.acc .content1_deposit_funds {
+    width: 70%;
+    padding-left: 65px;
+}
+
+.acc .content2_deposit_funds {
+    width: 20%;
+}
+
+.acc .content3_deposit_funds {
+    float: right;
+    width: 10%;
+}
+
+.acc h3 {
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 0;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.acc h3:after {
+    content: '+';
+    float: right;
+    font-size: 25px;
+    margin-top: -25px;
+}
+
+.acc.active h3:after {
+    content: '-';
+}
+
+.content {
+    background-color: #fff;
+    color: #000;
+    display: none;
+    border-top: 1px solid #d6d6d6;
+    margin-top: 1rem;
+    padding-top: 15px;
+}
+
+.content .text-body {
+    font-size: 13px;
+    display: table;
+    padding-left: 3rem;
+    margin-top: 1.5rem;
+}
+
+.content .content-warning {
+    font-size: 13px;
+    margin-top: 1rem;
+}
+
+.payment_item .pi_header {
+    display: inline-flex;
+    width: 100%;
+}
+
+.content .tablewallet {
+    margin-top: 1.5rem;
+}
+
+.payment_item .pi_header span.credit_card_icon {
+    background: url(@/assets/images/funding_icons_sprite2.gif) no-repeat;
+    height: 36px;
+    width: 50px;
+    position: absolute;
+    display: inline-block;
+    top: 5px;
+    left: 15px;
+}
+
+.payment_item .pi_header span.bank_icon {
+    background: url(@/assets/images/icon-paytoday.png) no-repeat;
+    height: 36px;
+    width: 50px;
+    position: absolute;
+    display: inline-block;
+    top: 2px;
+    left: 15px;
+}
+
+.account-btn .btn {
+    border-radius: 0px;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0.4rem 1rem;
+    width: 100%;
+    border: none;
+    transition: 0.5s;
+    background-size: 200% auto;
+}
+
+.tablewallet .btn-sub {
+    background-image: linear-gradient(to right, #b27f2b 0%, #f7de7c 40%, #b27f2b 100%);
+    color: #fff;
+}
+
+.tablewallet .btn-sub:hover {
+    color: #000;
+    background-position: right center;
+}
+
+.tablewallet i {
+    float: right;
+    margin-top: 5px;
+}
+
+
+/* payment */
+
+
+/* Withdraw */
+
+.deposit-panel-body .Withdraw_card {
+    position: relative;
+    background-color: #231f20;
+    border-radius: 6px;
+    padding: 30px;
+}
+
+.deposit-panel-body .Withdraw_card .Withdraw-list-title {
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.deposit-panel-body .Withdraw_card .Withdraw-list-title h4 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.deposit-panel-body .Withdraw_card .Withdraw_warning {
+    background-color: #373334;
+    padding: 12px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 15px;
+    font-size: 12px;
+    text-align: justify;
+    border-top: 3px solid #ffc107 !important;
+    line-height: 20px;
+    margin-bottom: 30px;
+}
+
+.deposit-panel-body .Withdraw_card .Withdraw_warning p {
+    margin-bottom: 0;
+    position: relative;
+    padding-left: 18px !important;
+    padding-bottom: 5px;
+}
+
+.deposit-panel-body .Withdraw_card .Withdraw_warning p:before {
+    content: '';
+    height: 6px;
+    width: 6px;
+    background-color: #34e834;
+    border-radius: 50%;
+    position: absolute;
+    top: 6px;
+    left: 0;
+}
+
+.deposit-panel-body .Withdraw_card .Withdraw-list-title .add-account i {
+    margin-right: 3px;
+}
+
+.deposit-panel-body .Withdraw_card .Withdraw-list-title .add-account .btn {
+    font-size: 18px;
+    font-weight: 400;
+    padding: 0.25rem 1.5rem;
+    margin: 0 0.75rem;
+    transition: 0.5s;
+    background-size: 200% auto;
+}
+
+.deposit-panel-body .Withdraw_card .Withdraw-list-title .add-account .btn.plusaddccount {
+    background-image: linear-gradient(to right, #b27f2b 0%, #f7de7c 35%, #b27f2b 100%);
+    color: #000;
+    font-size: 16px;
+}
+
+.deposit-panel-body .Withdraw_card .Withdraw-list-title .add-account .btn.plusaddccount:hover {
+    color: #fff;
+    background-position: right center;
+}
+
+#deposit_page_bottom {
+    margin-top: 40px;
+    border-top: 1px solid;
+    padding-top: 15px;
+}
+
+#deposit_page_bottom h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+#deposit_page_bottom p {
+    text-align: justify;
+    padding-bottom: 15px;
+    line-height: 15pt;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+input.text {
+    height: 38px;
+    border-radius: 0;
+    border: solid 1px rgba(0, 0, 0, 0.2);
+    line-height: 34px;
+    font-size: 12px;
+    min-width: 60px;
+    margin-bottom: 5px;
+}
+
+.account-btn .btn {
+    border-radius: 0px;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0.4rem 1rem;
+    width: 100%;
+    border: none;
+    transition: 0.5s;
+    background-size: 200% auto;
+}
+
+.account-btn .btn-sub {
+    background-image: linear-gradient(to right, #b27f2b 0%, #f7de7c 40%, #b27f2b 100%);
+    color: #fff;
+}
+
+.account-btn .btn-sub:hover {
+    color: #000;
+    background-position: right center;
+}
+
+.account-btn i {
+    float: right;
+    margin-top: 5px;
+}
+
+.info_wrapper {
+    padding-top: 15px;
+    clear: both;
+    margin: 25px 0;
+    font-weight: bold;
+}
+
+.deposit__text--green {
+    color: #02d667;
+    font-size: 16px;
+    margin-bottom: 10px !important;
+}
+
+
+/* form starting stylings ------------------------------- */
+
+.withdraw__amount {
+    position: relative;
+    margin-bottom: 0px;
+}
+
+.withdraw__amount input {
+    font-size: 18px;
+    padding: 10px 10px 8px 5px;
+    display: block;
+    width: 300px;
+    border: none;
+    color: #fff;
+    background-color: transparent;
+    border-bottom: 1px solid #757575;
+}
+
+.withdraw__amount input:focus {
+    outline: none;
+}
+
+
+/* LABEL ======================================= */
+
+.withdraw__amount label {
+    color: #999;
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+
+/* active state */
+
+input:focus~.highlight {
+    -webkit-animation: inputHighlighter 0.3s ease;
+    -moz-animation: inputHighlighter 0.3s ease;
+    animation: inputHighlighter 0.3s ease;
+}
+
+
+/* ANIMATIONS ================ */
+
+@-webkit-keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@-moz-keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+@keyframes inputHighlighter {
+    from {
+        background: #5264AE;
+    }
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+
+/* Withdraw */
+
 .deposit-panel-body .styles_item-card {
     position: relative;
     background-color: #373334;
@@ -1049,6 +1508,26 @@
     margin-top: 15px;
     border: 2px solid #9b999a;
     padding: 10px 15px;
+}
+
+.deposit-panel-body .styles_item-card ul.cardList .btn {
+    position: relative;
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 15px;
+    border: 2px solid #9b999a;
+    padding: 10px 15px;
+}
+
+.deposit-panel-body .styles_item-card ul.cardList .btn .styles_item_btn {
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 0.4rem;
+    background-color: #373334;
+    margin: 0 0.75rem;
+    width: 40%;
+    border: none;
 }
 
 .deposit-panel-body .styles_item-card ul.cardList .styles_item label {
@@ -1104,36 +1583,38 @@
     margin: 0 0.75rem;
     width: 40%;
     border: none;
+    transition: 0.5s;
+    background-size: 200% auto;
 }
 
 .deposit-panel-body .styles_item-more .btn-more-1 {
-    background: rgb(28, 161, 220);
-    background: linear-gradient(90deg, rgba(28, 161, 220, 1) 0%, rgba(114, 197, 239, 1) 70%, rgba(28, 161, 220, 1) 100%);
+    background-image: linear-gradient(to right, #1ca1dc 0%, #72c5ef 40%, #1ca1dc 100%);
     color: #fff;
 }
 
 .deposit-panel-body .styles_item-more .btn-more-2 {
-    background: rgb(212, 50, 63);
-    background: linear-gradient(90deg, rgba(212, 50, 63, 1) 0%, rgba(235, 149, 28, 1) 100%, rgba(235, 149, 28, 1) 100%);
+    background-image: linear-gradient(to right, #d4323f 0%, #eb951c 40%, #d4323f 100%);
     color: #fff;
 }
 
 .deposit-panel-body .styles_item-more .btn-more-3 {
-    background: rgb(178, 127, 43);
-    background: linear-gradient(90deg, rgba(178, 127, 43, 1) 0%, rgba(247, 222, 124, 1) 70%, rgba(255, 244, 167, 1) 100%);
+    background-image: linear-gradient(to right, #b27f2b 0%, #f7de7c 35%, #b27f2b 100%);
     color: #fff;
 }
 
 .deposit-panel-body .styles_item-more .btn-more-1:hover {
     color: #000;
+    background-position: right center;
 }
 
 .deposit-panel-body .styles_item-more .btn-more-2:hover {
     color: #000;
+    background-position: right center;
 }
 
 .deposit-panel-body .styles_item-more .btn-more-3:hover {
     color: #000;
+    background-position: right center;
 }
 
 
@@ -1226,6 +1707,23 @@
     margin-top: 2rem;
 }
 
+.section-management .add-account {
+    text-align: right;
+    position: relative;
+    margin-top: -50px;
+    margin-bottom: 20px;
+}
+
+.section-management .add-account .btn.edit-profile {
+    color: #fff;
+    background-color: #373334;
+}
+
+.section-management .add-account .btn.edit-profile:hover {
+    color: #fff;
+    background-color: #231f20;
+}
+
 
 /* //////////////////////////////////////////////////////////////////////////////////////// */
 
@@ -1240,6 +1738,10 @@
     position: relative;
 }
 
+.bg-Stat-EA {
+    padding-top: 3rem;
+}
+
 .card-Stat-EA {
     background-color: #373334;
     border-radius: 6px 6px 0px 0px;
@@ -1247,7 +1749,7 @@
     border: 0px;
     border-bottom: 5px solid;
     -o-border-image: linear-gradient(90deg, rgba(178, 127, 43, 1) 0%, rgba(254, 242, 163, 1) 50%, rgba(178, 127, 43, 1) 100%);
-    border-image: linear-gradient( 90deg, rgba(178, 127, 43, 1) 0%, rgba(254, 242, 163, 1) 50%, rgba(178, 127, 43, 1) 100%);
+    border-image: linear-gradient(90deg, rgba(178, 127, 43, 1) 0%, rgba(254, 242, 163, 1) 50%, rgba(178, 127, 43, 1) 100%);
     border-image-slice: 1;
 }
 
@@ -1255,6 +1757,7 @@
     font-size: 24px;
     font-weight: normal;
     margin-bottom: 5px;
+    color: #fff;
 }
 
 .card-Stat-EA .header-ea .favorite-right {
@@ -1271,7 +1774,7 @@
 .card-Stat-EA .header-ea .favorite-right label {
     margin-bottom: 0;
     background: rgb(28, 161, 220);
-    background: linear-gradient( 90deg, rgba(28, 161, 220, 1) 0%, rgba(114, 197, 239, 1) 70%, rgba(28, 161, 220, 1) 100%);
+    background: linear-gradient(90deg, rgba(28, 161, 220, 1) 0%, rgba(114, 197, 239, 1) 70%, rgba(28, 161, 220, 1) 100%);
     border-radius: 20px;
     padding: 4px 13px 4px 5px;
     font-size: 20px;
@@ -1380,6 +1883,28 @@
     color: #484445;
 }
 
+.card-discription-stat-ea {
+    background-color: #373334;
+    border-radius: 6px;
+    margin-top: 0px;
+    padding: 8px 15px;
+    margin-bottom: 5px;
+}
+
+.card-discription-stat-ea .item-stat-completed .form-completed {
+    display: flex;
+    color: #9b999a;
+    font-size: 15px;
+}
+
+.card-discription-stat-ea .item-stat-completed .form-completed .text-order {
+    color: #9b999a;
+    font-size: 15px;
+    width: 10rem;
+    margin-right: 0rem;
+    margin-bottom: 0;
+}
+
 
 /* //////////////////////////////////////////////////////////////////////////////////////// */
 
@@ -1407,3 +1932,180 @@
     padding-top: 1.5em;
     padding-bottom: 1.5em;
 }
+
+
+/* ///////////////////////////////////////      Settings    ///////////////////////////////////////////////// */
+
+.Set-notificat .notificat_formgroup {
+    margin-bottom: 30px;
+    font-size: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #7c7c7c;
+}
+
+.Set-notificat .notificat_formgroup h5.notificat_title {
+    font-size: 20px!important;
+    margin-bottom: 15px!important;
+}
+
+.Set-notificat .switch-box input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.Set-notificat .switch-box label {
+    outline: 0px;
+    display: block;
+    width: 50px;
+    height: 28px;
+    position: relative;
+    margin: auto;
+    cursor: pointer;
+    padding: 2px;
+    top: -25px;
+    user-select: none;
+    border-radius: 30px;
+    transition: all 0.4s ease 0s;
+    box-shadow: rgb(161 161 161 / 35%) 0px 0px 6px 0px inset;
+    background: #b0b0b0;
+}
+
+.Set-notificat .switch-box label:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 24px;
+    height: 24px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+.Set-notificat .switch-box input:checked+label {
+    background: #34E834;
+}
+
+.Set-notificat .switch-box input:checked+label:after {
+    left: calc(80% - 5px);
+    transform: translateX(-50%);
+}
+
+.Set-notificat .switch-box label:active:after {
+    width: 25px;
+}
+
+
+/* ///////////////////////////////////////      Settings    ///////////////////////////////////////////////// */
+
+.faq-panel-heading {
+    border-bottom: 1px solid;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.faq-panel-heading h3 {
+    font-size: 24px;
+    font-weight: 400;
+    padding-bottom: 5px;
+}
+
+.section-tree {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.section-tree .section {
+    display: inline-block;
+    flex: 1 0 49%;
+    padding-bottom: 5px;
+}
+
+.section-tree .section ul {
+    list-style: none;
+    margin: 5;
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    .section-tree .section:nth-child(odd) {
+        padding-left: 0;
+    }
+}
+
+.article-list-item {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.article-list-item i {
+    color: #ffd34b;
+    font-size: 18px;
+}
+
+.article-list-item a {
+    color: #fff;
+}
+
+a.article-list-link:hover {
+    color: #ffd34b;
+    text-decoration: none;
+}
+
+.article {
+    flex: 1 0 66%;
+    max-width: 100%;
+    min-width: 640px;
+}
+
+.article hr:not([size]) {
+    height: 0.2px;
+}
+
+.article hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid #fff;
+}
+
+.article-header {
+    flex-direction: row;
+    margin-top: 0;
+}
+
+.article-header {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-bottom: 0px solid #ddd;
+}
+
+.article-title {
+    flex-basis: 100%;
+    font-size: 34px;
+}
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* //////////////////////////////////////////// */
+
+@media (max-width: 1200px) {}
+
+@media (max-width: 991.98px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 576px) {}
+
+@media (max-width: 425px) {}

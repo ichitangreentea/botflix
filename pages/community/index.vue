@@ -50,6 +50,7 @@
             </div>
           </div>
         </div>
+         <Footer />
       </main>
     </div>
 
@@ -61,12 +62,14 @@
 <script>
   import Leftsidebar from '@/components/nav-slide'
   import Header from '@/components/header'
+  import Footer from '@/components/footer'
   import NewRight from '@/components/Popular_articles/new-post'
   import Widget from '@/components/Popular_articles/widget'
 
   export default {
     components: {
       Leftsidebar,
+      Footer,
       Header,
       NewRight,
       Widget,
@@ -302,7 +305,7 @@
   .nav-tabs .nav-link.active {
     color: #9b999a;
     background-color: transparent;
-    border-bottom: 3px solid;
+    border-bottom: 3px solid #ffc667;
     border-image: linear-gradient(90deg, rgba(178, 127, 43, 1) 0%, rgba(254, 242, 163, 1) 50%, rgba(178, 127, 43, 1) 100%);
     border-image-slice: 1;
     border-top: none;

@@ -79,6 +79,7 @@
             </div>
           </div>
         </div>
+         <Footer />
       </main>
     </div>
 
@@ -90,6 +91,7 @@
 <script>
   import Leftsidebar from '@/components/nav-slide'
   import Header from '@/components/header'
+  import Footer from '@/components/footer'
   import NewRight from '@/components/Popular_articles/new-post'
   import Widget from '@/components/Popular_articles/widget'
 
@@ -97,6 +99,7 @@
     components: {
       Leftsidebar,
       Header,
+      Footer,
       NewRight,
       Widget,
     },

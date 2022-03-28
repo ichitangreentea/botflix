@@ -5,20 +5,6 @@
       <div class="graph-top">
         <b-img center src="@/assets/upload/bf-graph.png" fluid alt="Responsive Center image"></b-img>
       </div>
-      <h5>Top Following <span>All</span></h5>
-      <div class="user-follows d-flex">
-        <div v-for="avatar in section1" :key="avatar.id">
-          <div id="user-avatar-follows">
-            <div class="user-avatar-border">
-              <div class="user-avatar-img avatarPic">
-                <img :src="`${avatar.image}`" class="" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
       <h5>Nottifications</h5>
       <div class="blog-content">
         

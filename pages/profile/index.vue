@@ -36,7 +36,7 @@
                       </div>
                       </div>
 
-                      <div class="Avatar-follow">
+                      <!-- <div class="Avatar-follow">
                         <div class="HeaderText">
                           <img src="@/assets/images/icon-avatar-follow.png" class="">
                           <p class="numberText">3456</p>
@@ -47,7 +47,7 @@
                           <p class="numberText">789</p>
                           <p class="text2">Following</p>
                         </div>
-                      </div>
+                      </div> -->
                       <div class="row justify-content-center ">
                         <div class="col-5 pl-0">
                           <b-input-group>
@@ -83,11 +83,6 @@
                   </div>
 
                   <div class="col-lg-5">
-                    <div class="profile-panel">
-                      <b-link href="/profile/edit_profile" class="btn btn-md edit-profile">Edit Profile</b-link>
-                      <b-link href="#" class="btn btn-md follow-profile "><img
-                          src="@/assets/images/icon-avatar-follow-plus.png" width="38" height="24"> Follow</b-link>
-                    </div>
                     <div class="botea-panel">
                     <h5>Bot EA</h5>
                     <!--  -->
@@ -103,6 +98,7 @@
             </div>
           </div>
         </div>
+         <Footer />
       </main>
     </div>
     <!-- page-content" -->
@@ -112,12 +108,14 @@
 <script>
   import Leftsidebar from '@/components/nav-slide'
   import Header from '@/components/header'
+  import Footer from '@/components/footer'
   import PopularRight from '@/components/Popular_articles/ea-popular-posts'
   import BotEa from '@/components/bot/BotEa'
   export default {
     components: {
       Leftsidebar,
       Header,
+      Footer,
       PopularRight,
       BotEa,
     },
